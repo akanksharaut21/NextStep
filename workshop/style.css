@@ -1,1 +1,288 @@
+html{
+  scroll-behavior: smooth;
+}
 
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 2px 0;
+}
+
+.navbar .container {
+  width: 97%; /* Adjusted width */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 150px; /* Adjusted logo size */
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px; /* Adjusted font size */
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff7f50;
+}
+
+.navbar-button {
+  display: flex;
+}
+
+.btn-auth {
+  background-color: #ff7f50; /* Orange color */
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li .btn-auth {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-auth:hover {
+  background-color: #e66a33; /* Darker orange for hover effect */
+  color: white;
+}
+
+/* Hamburger Menu (for mobile view) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      right: 30px;
+      width: 200px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
+
+/* Introductory Banner Styles */
+.intro-banner {
+  background-image: url('https://cdn.prod.website-files.com/64830736e7f43d491d70ef30/64831110fb7f536bf75f05a5_workshop%2Benvironment-6.png'); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 80px;
+}
+
+.intro-banner .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.banner-content .cta-btn {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.banner-content .cta-btn:hover {
+  background-color: #e66a33;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+.tab-btn:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+/* Event Cards */
+.event-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.event-info {
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.event-details {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.event-date,
+.event-entry {
+  font-size: 14px;
+  color: #888;
+}
+
+.event-tag {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.event-type {
+  color: #ff7f50;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* CTA Button */
+.cta-btn {
+  background-color: #ff7f50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #e66a33;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .event-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .event-card {
+      max-width: 90%;
+  }
+}
