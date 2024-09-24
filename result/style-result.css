@@ -1,0 +1,342 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container-report {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 2px 0;
+}
+
+.container {
+    width: 97%;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ff7f50;
+}
+
+
+.navbar-button {
+    display: flex;
+  }
+  
+  .btn-auth {
+    background-color: #ff7f50; /* Orange color */
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    
+    transition: background-color 0.3s ease;
+  }
+  .nav-links li .btn-auth{
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .btn-auth:hover {
+    background-color: #e66a33; /* Darker orange for hover effect */
+    color: white;
+  }
+  
+  
+
+/* Hamburger for Mobile View */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 24px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease;
+    z-index: 999; /* On top of everything */
+    padding-top: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff7f50;
+    padding-left: 10px;
+    transition: padding 0.3s ease;
+}
+
+/* Show Sidebar when active */
+.sidebar.active {
+    left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+
+
+/* --------------------------- */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.report {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.report-content {
+    width: 50%;
+}
+
+
+/* Report Box */
+.report-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* strangth */
+.strengths-section {
+    grid-column: span 1;
+}
+
+.strengths-list {
+    list-style: none;
+    padding: 0;
+}
+
+.strengths-list li {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.strengths-list li i {
+    color: #ff7f50;
+    margin-right: 10px;
+}
+
+
+/* Interests Section */
+.interests-section {
+    grid-column: span 1;
+}
+
+.interest-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.interest-card {
+    text-align: center;
+}
+
+.interest-card img {
+    width: 40px;
+    height: 40px;
+}
+
+.interest-card p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+
+/* Summary Section */
+.summary-section {
+    grid-column: span 2;
+}
+
+.summary-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* Chart */
+.report-chart {
+    width: 35%;
+}
+
+
+
+/* Careers section */
+
+#career-head{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.careers {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.career-card {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    background-color: #eef4f9;
+}
+
+.career-card h3 {
+    font-size: 18px;
+    color:black;
+    margin-bottom: 10px;
+}
+
+.career-card p {
+    color:black;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .report-content, .report-chart {
+        width: 100%;
+    }
+
+    .report-chart {
+        margin: 20px auto;
+    }
+
+    .careers {
+        flex-direction: column;
+    }
+
+    .career-card {
+        width: 100%;
+    }
+}
+
+#downloadreport{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.btn-down {
+  background-color: #ff7f50; /* Orange color */
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  
+  transition: background-color 0.3s ease;
+}
+.btn-down {
+    background-color: #ff7f50; /* Orange color */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.download-container a{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.btn-down:hover {
+  background-color: #e66a33; /* Darker orange for hover effect */
+  color: white;
+}

@@ -1,1 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="./style-result.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+          <a href="../index.html" class="logo">
+            <img src="../assets/logo.jpeg" alt="NextStep Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#features">Features</a></li>
+            <li><a href="../index.html#nep-policy">NEP 2020</a></li>
+            <li><a href="../nextStep Stimulation/mainsimulation.html">Simulations</a></li>
+            <li><a href="../workshop/index.html">Workshops</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li>
+              <div class="navbar-button">
+                <a href="../register/register.html" class="btn btn-auth">Sign Up / Login</a>
+              </div>            
+            </li>
+          </ul>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- Sidebar Navigation for Mobile -->
+      <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#features">Features</a></li>
+            <li><a href="../index.html#nep-policy">NEP 2020</a></li>
+            <li><a href="../nextStep Stimulation/mainsimulation.html">Simulations</a></li>
+            <li><a href="../workshop/index.html">Workshops</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="../register/register.html">Sign Up / Login</a></li>
+        </ul>
+      </div>
+  
+    <div class="container-report">
+      <header>
+        <h2>Your Personalized Career Report</h2>
+      </header>
+      <section class="report">
+        <div class="report-content">
+          <!-- Strengths Section -->
+          <div class="report-box strengths-section">
+            <h3>Strengths</h3>
+            <ul class="strengths-list">
+              <li><i class="fas fa-check-circle"></i> Problem-Solving</li>
+              <li><i class="fas fa-check-circle"></i> Communication Skills</li>
+              <li><i class="fas fa-check-circle"></i> Analytical Thinking</li>
+            </ul>
+          </div>
 
+          <!-- Interested Areas Section -->
+          <div class="report-box interests-section">
+            <h3>Interested Areas</h3>
+            <div class="interest-grid">
+              <div class="interest-card">
+                <img src="../assets/research.gif" alt="">
+                <p>Science & Research</p>
+              </div>
+              <div class="interest-card">
+                <img src="../assets/coding.gif" alt="Tech Icon" />
+                <p>Technology</p>
+              </div>
+              <div class="interest-card">
+                <img src="../assets/buissness.gif" alt="Business Icon" />
+                <p>Business & Management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="report-chart">
+          <canvas id="careerChart"></canvas>
+        </div>
+      </section>
+      <!-- Summary Section -->
+      <div class="report-box summary-section">
+        <h3>Summary</h3>
+        <p>
+          Your profile suggests a strong inclination towards analytical
+          problem-solving and technology. Based on your skills, interests, and
+          strengths, we recommend exploring careers in software engineering,
+          data science, or research in technology-driven fields.
+        </p>
+      </div>
+
+
+      <div id="career-head">
+        <h2>Careers</h2>
+      </div>
+      <section class="careers">
+        <div class="career-card">
+          <h3>Software Developer</h3>
+          <p>
+            <strong>Description:</strong> Build, test, and maintain software
+            systems.
+          </p>
+          <p>
+            <strong>Roadmap:</strong> Learn programming languages, gain
+            experience, specialize in a field.
+          </p>
+          <p>
+            <strong>Skills Required:</strong> Coding, debugging, system design.
+          </p>
+          <p><strong>Salary:</strong> $70,000 - $120,000 per year.</p>
+          <p><strong>Growth Potential:</strong> High</p>
+        </div>
+
+        <div class="career-card">
+          <h3>Data Scientist</h3>
+          <p>
+            <strong>Description:</strong> Analyze and interpret complex data to
+            help organizations make decisions.
+          </p>
+          <p>
+            <strong>Roadmap:</strong> Study statistics, learn data analysis
+            tools, gain industry experience.
+          </p>
+          <p>
+            <strong>Skills Required:</strong> Statistical analysis, programming,
+            data visualization.
+          </p>
+          <p><strong>Salary:</strong> $80,000 - $140,000 per year.</p>
+          <p><strong>Growth Potential:</strong> Very High</p>
+        </div>
+
+        <div class="career-card">
+          <h3>Cybersecurity Specialist</h3>
+          <p>
+            <strong>Description:</strong> Protect systems and networks from
+            cyber threats.
+          </p>
+          <p>
+            <strong>Roadmap:</strong> Learn security principles, gain
+            experience, specialize in cybersecurity domains.
+          </p>
+          <p>
+            <strong>Skills Required:</strong> Network security, ethical hacking,
+            risk management.
+          </p>
+          <p><strong>Salary:</strong> $75,000 - $130,000 per year.</p>
+          <p><strong>Growth Potential:</strong> Very High</p>
+        </div>
+      </section>
+
+    </div>
+    <div id="downloadreport">
+        <div class="download-container">
+            <button class="btn-down" id="printButton">Download Report</button>
+        </div>  
+    </div>
+    <script src="./result.js"></script>
+  </body>
+</html>
