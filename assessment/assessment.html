@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Assessment</title>
+    <link rel="stylesheet" href="style-assessment.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">
+            <img src="../assets/logo.jpeg" alt="NextStep Logo" />
+          </a>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        <form id="assessmentForm">
+            <div class="question-container">
+                <!-- Question 1 -->
+                <div class="question" id="question1">
+                    <h2>Question 1: What type of activities do you enjoy in your free time?</h2>
+                    <label><input type="radio" name="q1" value="sports" required> Playing Sports</label><br>
+                    <label><input type="radio" name="q1" value="reading" required> Reading Books</label><br>
+                    <label><input type="radio" name="q1" value="art" required> Drawing/Painting</label><br>
+                    <label><input type="radio" name="q1" value="tech" required> Working with Technology</label><br>
+                    <button type="button" disabled>Previous</button>
+                    <button type="button" onclick="nextQuestion(2)">Next</button>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="question" id="question2" style="display:none;">
+                    <h2>Question 2: Which subject do you find the most interesting?</h2>
+                    <label><input type="radio" name="q2" value="math"required> Mathematics</label><br>
+                    <label><input type="radio" name="q2" value="science"required> Science</label><br>
+                    <label><input type="radio" name="q2" value="history"required> History</label><br>
+                    <label><input type="radio" name="q2" value="languages"required> Languages</label><br>
+                    <button type="button" onclick="prevQuestion(1)">Previous</button>
+                    <button type="button" onclick="nextQuestion(3)">Next</button>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="question" id="question3" style="display:none;">
+                    <h2>Question 3: Which of the following best describes your problem-solving approach?</h2>
+                    <label><input type="radio" name="q3" value="logical" required> Logical and Analytical</label><br>
+                    <label><input type="radio" name="q3" value="creative" required> Creative and Innovative</label><br>
+                    <label><input type="radio" name="q3" value="intuitive" required> Intuitive and Instinctive</label><br>
+                    <label><input type="radio" name="q3" value="practical" required> Practical and Hands-on</label><br>
+                    <button type="button" onclick="prevQuestion(2)">Previous</button>
+                    <button type="button" onclick="nextQuestion(4)">Next</button>
+                </div>
+            
+                <!-- Question 4 -->
+                <div class="question" id="question4" style="display:none;">
+                    <h2>Question 4: How do you feel about working in a team?</h2>
+                    <label><input type="radio" name="q4" value="love" required> I love collaborating with others</label><br>
+                    <label><input type="radio" name="q4" value="ok" required> I’m okay with it but prefer working alone</label><br>
+                    <label><input type="radio" name="q4" value="dislike" required> I dislike it and prefer independent work</label><br>
+                    <label><input type="radio" name="q4" value="depends" required> It depends on the situation</label><br>
+                    <button type="button" onclick="prevQuestion(3)">Previous</button>
+                    <button type="button" onclick="nextQuestion(5)">Next</button>
+                </div>
+            
+                <!-- Question 5 -->
+                <div class="question" id="question5" style="display:none;">
+                    <h2>Question 5: Which of the following areas would you like to learn more about?</h2>
+                    <label><input type="radio" name="q5" value="programming" required> Programming and Coding</label><br>
+                    <label><input type="radio" name="q5" value="medicine" required> Medicine and Healthcare</label><br>
+                    <label><input type="radio" name="q5" value="design" required> Design and Creativity</label><br>
+                    <label><input type="radio" name="q5" value="environment" required> Environment and Nature</label><br>
+                    <button type="button" onclick="prevQuestion(4)">Previous</button>
+                    <button type="button" onclick="nextQuestion(6)">Next</button>
+                </div>
+            
+                <!-- Question 6 -->
+                <div class="question" id="question6" style="display:none;">
+                    <h2>Question 6: Which of the following is not a programming language?</h2>
+                    <label><input type="radio" name="q6" value="python" required> Python</label><br>
+                    <label><input type="radio" name="q6" value="html" required> HTML</label><br>
+                    <label><input type="radio" name="q6" value="java" required> Java</label><br>
+                    <label><input type="radio" name="q6" value="csharp" required> C#</label><br>
+                    <button type="button" onclick="prevQuestion(5)">Previous</button>
+                    <button type="button" onclick="nextQuestion(7)">Next</button>
+                </div>
+            
+                <!-- Question 7 -->
+                <div class="question" id="question7" style="display:none;">
+                    <h2>Question 7: If you could choose any career, which one would you pick?</h2>
+                    <label><input type="radio" name="q7" value="engineer" required> Engineer</label><br>
+                    <label><input type="radio" name="q7" value="doctor" required> Doctor</label><br>
+                    <label><input type="radio" name="q7" value="artist" required> Artist</label><br>
+                    <label><input type="radio" name="q7" value="entrepreneur" required> Entrepreneur</label><br>
+                    <button type="button" onclick="prevQuestion(6)">Previous</button>
+                    <button type="button" onclick="nextQuestion(8)">Next</button>
+                </div>
+            
+                <!-- Question 8 -->
+                <div class="question" id="question8" style="display:none;">
+                    <h2>Question 8: Which field interests you the most?</h2>
+                    <label><input type="radio" name="q8" value="technology" required> Technology</label><br>
+                    <label><input type="radio" name="q8" value="medicine" required> Medicine</label><br>
+                    <label><input type="radio" name="q8" value="business" required> Business</label><br>
+                    <label><input type="radio" name="q8" value="arts" required> Arts</label><br>
+                    <button type="button" onclick="prevQuestion(7)">Previous</button>
+                    <button type="button" onclick="nextQuestion(9)">Next</button>
+                </div>
+            
+                <!-- Question 9 -->
+                <div class="question" id="question9" style="display:none;">
+                    <h2>Question 9: How do you prefer to learn new things?</h2>
+                    <label><input type="radio" name="q9" value="hands-on" required> Hands-on Experience</label><br>
+                    <label><input type="radio" name="q9" value="reading" required> Reading and Researching</label><br>
+                    <label><input type="radio" name="q9" value="lectures" required> Listening to Lectures</label><br>
+                    <label><input type="radio" name="q9" value="videos" required> Watching Videos</label><br>
+                    <button type="button" onclick="prevQuestion(8)">Previous</button>
+                    <button type="button" onclick="nextQuestion(10)">Next</button>
+                </div>
+            
+                <!-- Question 10 -->
+                <div class="question" id="question10" style="display:none;">
+                    <h2>Question 10: Which tool is commonly used to create a website?</h2>
+                    <label><input type="radio" name="q10" value="photoshop" required> Photoshop</label><br>
+                    <label><input type="radio" name="q10" value="css" required> CSS</label><br>
+                    <label><input type="radio" name="q10" value="excel" required> Excel</label><br>
+                    <label><input type="radio" name="q10" value="word" required> Microsoft Word</label><br>
+                    <button type="button" onclick="prevQuestion(9)">Previous</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="assessment.js"></script>
+</body>
+</html>
