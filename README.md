@@ -65,7 +65,7 @@ To make personalized, inclusive, and AI-powered career guidance available to eve
 
 Feel free to connect for queries, collaborations, or contributions:
 
-📧 japjotsingh.kashyap@gmail.com
+📧 akanksharaut2104@gmail.com
 
 ---
 
